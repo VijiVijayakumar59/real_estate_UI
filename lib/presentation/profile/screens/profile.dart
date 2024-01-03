@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:realestate/constants/colors.dart';
 import 'package:realestate/presentation/home/widgets/card_widget.dart';
 
@@ -10,11 +11,14 @@ class ProfileScreen extends StatelessWidget {
     return SafeArea(
       child: Scaffold(
         appBar: AppBar(
-          title: const Text(
+          title: Text(
             "Agent Profile",
-            style: TextStyle(
-              fontSize: 24,
-              fontWeight: FontWeight.bold,
+            style: GoogleFonts.aladin(
+              textStyle: const TextStyle(
+                  fontSize: 26,
+                  fontWeight: FontWeight.bold,
+                  letterSpacing: 2,
+                  color: Color.fromARGB(255, 110, 13, 127)),
             ),
           ),
         ),
@@ -24,15 +28,16 @@ class ProfileScreen extends StatelessWidget {
             child: Column(
               children: [
                 Card(
+                  elevation: 10,
                   shape: OutlineInputBorder(
                     borderSide: const BorderSide(
-                      color: greyColor,
+                      color: purpleColor,
                     ),
                     borderRadius: BorderRadius.circular(
-                      10,
+                      14,
                     ),
                   ),
-                  surfaceTintColor: Colors.white,
+                  surfaceTintColor: const Color.fromARGB(255, 218, 141, 232),
                   color: whiteColor,
                   child: Padding(
                     padding: const EdgeInsets.all(8.0),
@@ -47,12 +52,15 @@ class ProfileScreen extends StatelessWidget {
                               children: [
                                 SizedBox(
                                   height:
-                                      MediaQuery.of(context).size.height * 0.07,
+                                      MediaQuery.of(context).size.height * 0.08,
                                   width:
                                       MediaQuery.of(context).size.width * 0.16,
-                                  child: Image.network(
-                                    "https://cdn.pixabay.com/photo/2016/11/18/17/46/house-1836070_1280.jpg",
-                                    fit: BoxFit.fill,
+                                  child: ClipRRect(
+                                    borderRadius: BorderRadius.circular(22),
+                                    child: Image.network(
+                                      "https://upload.wikimedia.org/wikipedia/commons/1/1f/Woman_1.jpg",
+                                      fit: BoxFit.fill,
+                                    ),
                                   ),
                                 ),
                                 const SizedBox(

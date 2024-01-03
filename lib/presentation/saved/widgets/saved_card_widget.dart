@@ -14,12 +14,12 @@ class SavedCardWidget extends StatelessWidget {
         children: [
           Center(
             child: Container(
-              height: 260,
-              width: 340,
+              height: 200,
+              width: 300,
               margin: const EdgeInsets.all(6.0),
               decoration: BoxDecoration(
                 border: Border.all(
-                  color: greyColor,
+                  color: Colors.purple,
                 ),
                 borderRadius: BorderRadius.circular(8.0),
                 image: const DecorationImage(

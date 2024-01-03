@@ -1,6 +1,7 @@
 // ignore_for_file: avoid_print
 
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:realestate/constants/colors.dart';
 import 'package:realestate/presentation/notifications/widgets/notification_widget.dart';
 
@@ -36,11 +37,14 @@ class _NotificationScreenState extends State<NotificationScreen> {
     return SafeArea(
       child: Scaffold(
         appBar: AppBar(
-          title: const Text(
+          title: Text(
             "Notifications",
-            style: TextStyle(
-              fontSize: 26,
-              fontWeight: FontWeight.bold,
+            style: GoogleFonts.aladin(
+              textStyle: const TextStyle(
+                  fontSize: 26,
+                  fontWeight: FontWeight.bold,
+                  letterSpacing: 2,
+                  color: Color.fromARGB(255, 110, 13, 127)),
             ),
           ),
           actions: const [

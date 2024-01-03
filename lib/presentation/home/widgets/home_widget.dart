@@ -17,9 +17,10 @@ class HomeWidget extends StatelessWidget {
             "Real Estate",
             style: GoogleFonts.aladin(
               textStyle: const TextStyle(
-                fontWeight: FontWeight.w400,
-                fontSize: 32,
-              ),
+                  fontSize: 26,
+                  fontWeight: FontWeight.bold,
+                  letterSpacing: 2,
+                  color: Color.fromARGB(255, 110, 13, 127)),
             ),
           ),
         ),
@@ -88,12 +89,12 @@ class HomeWidget extends StatelessWidget {
                         margin: const EdgeInsets.all(6.0),
                         decoration: BoxDecoration(
                           border: Border.all(
-                            color: greyColor,
+                            color: purpleColor,
                           ),
                           borderRadius: BorderRadius.circular(8.0),
                           image: const DecorationImage(
                             image: NetworkImage(
-                              "https://www.jaageer.com/agency-images/1638169199670048725.jpeg",
+                              "https://as1.ftcdn.net/v2/jpg/04/32/56/22/1000_F_432562253_0AJEmoX8idRHQiBDCCgHjdsHUBZG7ppx.jpg",
                             ),
                             fit: BoxFit.cover,
                           ),
@@ -192,7 +193,7 @@ class HomeWidget extends StatelessWidget {
                               child: IconButton(
                                 onPressed: () {},
                                 icon: const Icon(
-                                  Icons.save_alt,
+                                  Icons.favorite_outline,
                                 ),
                               ),
                             )
@@ -209,12 +210,12 @@ class HomeWidget extends StatelessWidget {
                         margin: const EdgeInsets.all(6.0),
                         decoration: BoxDecoration(
                           border: Border.all(
-                            color: greyColor,
+                            color: purpleColor,
                           ),
                           borderRadius: BorderRadius.circular(8.0),
                           image: const DecorationImage(
                             image: NetworkImage(
-                              "https://www.jaageer.com/agency-images/1638169199670048725.jpeg",
+                              "https://as1.ftcdn.net/v2/jpg/03/57/29/66/1000_F_357296644_jZcnxFUpcWDcoPwcnaEJBpscagim8knh.jpg",
                             ),
                             fit: BoxFit.cover,
                           ),
@@ -321,11 +322,11 @@ class HomeWidget extends StatelessWidget {
                   height: MediaQuery.of(context).size.height * 0.36,
                   enlargeCenterPage: false,
                   autoPlay: true,
-                  aspectRatio: 16 / 16,
-                  autoPlayCurve: Curves.fastOutSlowIn,
+                  aspectRatio: 16 / 10,
+                  autoPlayCurve: Curves.linearToEaseOut,
                   enableInfiniteScroll: true,
-                  autoPlayAnimationDuration: const Duration(milliseconds: 800),
-                  viewportFraction: 0.6,
+                  autoPlayAnimationDuration: const Duration(milliseconds: 650),
+                  viewportFraction: 0.7,
                 ),
               ),
               const Padding(

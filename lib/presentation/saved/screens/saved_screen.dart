@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:realestate/presentation/saved/widgets/saved_card_widget.dart';
 
 class SavedWidget extends StatelessWidget {
@@ -9,11 +10,14 @@ class SavedWidget extends StatelessWidget {
     return SafeArea(
       child: Scaffold(
         appBar: AppBar(
-          title: const Text(
+          title: Text(
             "Favourites",
-            style: TextStyle(
-              fontSize: 26,
-              fontWeight: FontWeight.bold,
+            style: GoogleFonts.aladin(
+              textStyle: const TextStyle(
+                  fontSize: 26,
+                  fontWeight: FontWeight.bold,
+                  letterSpacing: 2,
+                  color: Color.fromARGB(255, 110, 13, 127)),
             ),
           ),
         ),

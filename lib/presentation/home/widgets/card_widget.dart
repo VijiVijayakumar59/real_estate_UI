@@ -22,7 +22,7 @@ class CardWidget extends StatelessWidget {
         child: Card(
           shape: OutlineInputBorder(
             borderSide: const BorderSide(
-              color: greyColor,
+              color: Color.fromARGB(255, 218, 160, 228),
             ),
             borderRadius: BorderRadius.circular(
               10,
@@ -43,9 +43,12 @@ class CardWidget extends StatelessWidget {
                         SizedBox(
                           height: MediaQuery.of(context).size.height * 0.08,
                           width: MediaQuery.of(context).size.width * 0.17,
-                          child: Image.network(
-                            "https://cdn.pixabay.com/photo/2016/11/18/17/46/house-1836070_1280.jpg",
-                            fit: BoxFit.fill,
+                          child: ClipRRect(
+                            borderRadius: BorderRadius.circular(20),
+                            child: Image.network(
+                              "https://cdn.pixabay.com/photo/2016/11/18/17/46/house-1836070_1280.jpg",
+                              fit: BoxFit.fill,
+                            ),
                           ),
                         ),
                         const SizedBox(
@@ -66,6 +69,7 @@ class CardWidget extends StatelessWidget {
                           Icon(
                             Icons.star,
                             color: Colors.yellow,
+                            size: 26,
                           ),
                           Text(
                             "4.9",
