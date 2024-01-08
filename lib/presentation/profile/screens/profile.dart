@@ -11,6 +11,7 @@ class ProfileScreen extends StatelessWidget {
     return SafeArea(
       child: Scaffold(
         appBar: AppBar(
+          automaticallyImplyLeading: false,
           title: Text(
             "Agent Profile",
             style: GoogleFonts.aladin(

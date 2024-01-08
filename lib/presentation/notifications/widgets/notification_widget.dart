@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:realestate/constants/colors.dart';
+import 'package:realestate/constants/elevated_two_widget.dart';
 
 class NotificationWidget extends StatelessWidget {
   const NotificationWidget({
@@ -8,34 +9,34 @@ class NotificationWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.all(8.0),
+    return const Padding(
+      padding: EdgeInsets.all(8.0),
       child: Card(
         elevation: 5,
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceAround,
           children: [
-            const CircleAvatar(
+            CircleAvatar(
               radius: 30,
               backgroundImage: NetworkImage(
                 "https://upload.wikimedia.org/wikipedia/commons/1/1f/Woman_1.jpg",
               ),
             ),
-            const SizedBox(
+            SizedBox(
               width: 10,
             ),
             Positioned(
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  const Text(
+                  Text(
                     "Jackie Shroff",
                     style: TextStyle(
                       fontSize: 16,
                       fontWeight: FontWeight.bold,
                     ),
                   ),
-                  const SizedBox(
+                  SizedBox(
                     width: 250,
                     child: Text(
                       "This apartment was my home , with 4 bedrooms,and i truly recoomend ",
@@ -48,43 +49,9 @@ class NotificationWidget extends StatelessWidget {
                       maxLines: 2,
                     ),
                   ),
-                  Row(
-                    children: [
-                      ElevatedButton(
-                        style: ButtonStyle(
-                            shape: MaterialStateProperty.all<
-                                RoundedRectangleBorder>(RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(10.0),
-                        ))),
-                        onPressed: () {},
-                        child: const Text(
-                          "Review",
-                          style: TextStyle(
-                            color: blackColor,
-                          ),
-                        ),
-                      ),
-                      ElevatedButton(
-                        style: ButtonStyle(
-                          backgroundColor: MaterialStateProperty.all(
-                            const Color.fromARGB(255, 77, 122, 150),
-                          ),
-                          shape:
-                              MaterialStateProperty.all<RoundedRectangleBorder>(
-                            RoundedRectangleBorder(
-                              borderRadius: BorderRadius.circular(10.0),
-                            ),
-                          ),
-                        ),
-                        onPressed: () {},
-                        child: const Text(
-                          "Approve",
-                          style: TextStyle(
-                            color: whiteColor,
-                          ),
-                        ),
-                      ),
-                    ],
+                  ElevatedTwo(
+                    titleOne: "Review",
+                    titleTwo: "Approve",
                   ),
                 ],
               ),

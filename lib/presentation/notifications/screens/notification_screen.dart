@@ -82,9 +82,9 @@ class _NotificationScreenState extends State<NotificationScreen> {
                   Switch(
                     onChanged: toggleSwitch,
                     value: isSwitched,
-                    activeColor: Colors.blue,
+                    activeColor: Colors.purple,
                     activeTrackColor: whiteColor,
-                    inactiveThumbColor: Colors.blue,
+                    inactiveThumbColor: Colors.purple,
                     inactiveTrackColor: whiteColor,
                   ),
                 ],

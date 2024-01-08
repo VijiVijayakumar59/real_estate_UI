@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:realestate/constants/colors.dart';
 import 'package:realestate/presentation/home/widgets/card_widget.dart';
+import 'package:realestate/presentation/home/widgets/drawer_elevated_button.dart';
 import 'package:realestate/presentation/home/widgets/search_widget.dart';
 
 class HomeWidget extends StatelessWidget {
@@ -14,7 +15,7 @@ class HomeWidget extends StatelessWidget {
       child: Scaffold(
         appBar: AppBar(
           title: Text(
-            "Real Estate",
+            "Prestige Estate",
             style: GoogleFonts.aladin(
               textStyle: const TextStyle(
                   fontSize: 26,
@@ -31,9 +32,9 @@ class HomeWidget extends StatelessWidget {
                 decoration: const BoxDecoration(
                   gradient: LinearGradient(
                     colors: [
-                      Color.fromARGB(255, 255, 232, 24),
-                      Color.fromARGB(255, 230, 218, 105),
-                      Color.fromARGB(255, 255, 225, 30),
+                      Color.fromARGB(255, 198, 129, 225),
+                      Color.fromARGB(255, 214, 179, 245),
+                      Color.fromARGB(255, 195, 142, 224),
                     ],
                     begin: Alignment.bottomLeft,
                     end: Alignment.topRight,
@@ -42,7 +43,7 @@ class HomeWidget extends StatelessWidget {
                 child: Column(
                   children: [
                     Text(
-                      "Real Estate",
+                      "Prestige Estate",
                       style: GoogleFonts.aladin(
                         textStyle: const TextStyle(
                           fontSize: 28,
@@ -66,11 +67,26 @@ class HomeWidget extends StatelessWidget {
                   ],
                 ),
               ),
-              SizedBox(
-                height: MediaQuery.of(context).size.height * 0.01,
+              const DrawerElevatedButton(
+                text: "Booked Estates",
               ),
-              SizedBox(
-                height: MediaQuery.of(context).size.height * 0.01,
+              const SizedBox(
+                height: 10,
+              ),
+              const DrawerElevatedButton(
+                text: "Our Servies",
+              ),
+              const SizedBox(
+                height: 10,
+              ),
+              const DrawerElevatedButton(
+                text: "Reviews",
+              ),
+              const SizedBox(
+                height: 10,
+              ),
+              const DrawerElevatedButton(
+                text: "Settings",
               ),
             ],
           ),
@@ -78,7 +94,9 @@ class HomeWidget extends StatelessWidget {
         body: SingleChildScrollView(
           child: Column(
             children: [
-              const searchWidget(),
+              const SearchWidget(
+                title: "Price",
+              ),
               CarouselSlider(
                 items: [
                   Column(
